@@ -22,7 +22,7 @@ if ! which java > /dev/null; then
    echo -e "Installing Java..."
    sleep 3
    printf "\n\n"
-   yum -y install java-1.7.0-openjdk 
+   yum -y install java-1.8.0-openjdk 
    printf "\n\n" 
 
 else
@@ -38,6 +38,7 @@ if ! which mysql > /dev/null; then
    printf "\n\n"
    if [ $# -eq 0 ]; then
 	 echo "No arguments supplied... Using default MySQL Root Password..."
+	rpm -Uvh http://dev.mysql.com/get/mysql-community-release-el7-5.noarch.rpm
      yum -y install mysql-server
      service mysqld start
 	 mysqladmin -u root password "$ROOTPW"

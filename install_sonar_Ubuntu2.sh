@@ -21,8 +21,8 @@ if ! which java > /dev/null; then
    echo -e "Installing Java..."
    sleep 3
    printf "\n\n"
-   apt-get install -y openjdk-7-jdk
-   printf "\n\n"
+   apt-get install -y openjdk-8-jdk
+   printf "\n\n
 
 else
    echo "Java is installed."
